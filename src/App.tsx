@@ -4,39 +4,31 @@ import './App.css';
 import Header from 'components/header/Header';
 import Main from 'components/main/Main';
 import Footer from 'components/footer/Footer';
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import About from 'components/about/About';
 
-// function User({ member }: any) {
-//   return (
-//     <div>
-//       <b>{member.name}</b> <span>({member.id})</span>
-//     </div>
-//   );
-// }
+const redirectToMainPage = () => {
+  if (false) {
+    return <Navigate to="/" />;
+  } else {
+    return <Navigate to="/" />;
+  }
+};
 
 function App() {
-  // script 
-  // const [member, setMember] = useState<any>();
-
-  // useEffect(() => {
-  //   axios.get('/api/member').then((res) => setMember(res))
-  //   .catch(e => console.log(e));
-  // }, []);
-
-  // dom
-  // const memberList = member.map((m: any) => <p>{m.name}</p>);
-
   return (
-    <div className="App">
-      <Header />
-      <Routes>
-        <Route path="/about" Component={About} />
-      </Routes>
-      {/* { memberList } */}
-      <Main />
-      <Footer />
-    </div>
+    <>
+    <>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={redirectToMainPage()} />
+      <Route path="/*" element={<Router />} />
+    </Routes>
+    </BrowserRouter>
+    </>
+    <>
+    </>
+    </>
   );
 }
 
