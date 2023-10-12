@@ -1,11 +1,8 @@
-// import React, { useEffect, useState } from 'react';
-// import axios from 'axios';
-import './App.css';
 import Header from 'components/header/Header';
+import './App.css';
 import Main from 'components/main/Main';
-import Footer from 'components/footer/Footer';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
-import About from 'components/about/About';
+import Footer from 'components/footer/Footer';
 
 const redirectToMainPage = () => {
   if (false) {
@@ -18,16 +15,14 @@ const redirectToMainPage = () => {
 function App() {
   return (
     <>
-    <>
+    <Header />
     <BrowserRouter>
     <Routes>
       <Route path="/" element={redirectToMainPage()} />
-      <Route path="/*" element={<Router />} />
+      <Route path="/*" element={<Main />} />
     </Routes>
     </BrowserRouter>
-    </>
-    <>
-    </>
+    <Footer />
     </>
   );
 }

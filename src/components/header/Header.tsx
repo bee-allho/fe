@@ -1,13 +1,15 @@
-import React from 'react';
-
-
 
 const Header = () => {
     return (
-      <>     
-      H 
-        </>
-
+      <div>
+      Clicked: times
+      <button>
+        +
+      </button>
+      <button>
+        -
+      </button>
+    </div>
     );
 };
 

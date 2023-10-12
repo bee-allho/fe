@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import Footer from "components/footer/Footer";
+import Header from "components/header/Header";
 
 const Main = () => {
 
     return (
         <div>
+            main
         </div>
     );
 };
